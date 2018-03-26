@@ -6,7 +6,8 @@
 ## History
 In 2013, the team that created GraphLab PowerGraph started the Seattle-based company, GraphLab, Inc. The learnings from GraphLab PowerGraph and GraphChi projects have culminated into GraphLab Create, a enterprise-class data science platform for data scientists and software engineers that can simplify building and deploying advanced machine learning models as a RESTful predictive service. In January 2015, GraphLab, Inc. was renamed to Turi. See [turi.com](https://turi.com) for more information. 
 
-##addtional
+#addtional
+
 个人测试的机器最低配置：
 处理器：2
 内存：2GB
@@ -141,8 +142,8 @@ You can download GraphLab PowerGraph directly from the Github Repository. Github
 
 The git command line for cloning the repository is:
 
-    git clone https://github.com/graphlab-code/graphlab.git
-    cd graphlab
+    git clone https://github.com/mr-kkid/PowerGraph.git
+    cd PowerGraph
 
 
 # Compiling and Running
