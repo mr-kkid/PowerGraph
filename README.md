@@ -2,8 +2,29 @@
 
 ## UPDATE: For a signficant evolution of this codebase, see GraphLab Create which is available for download at [turi.com](https://turi.com)
 
+
 ## History
 In 2013, the team that created GraphLab PowerGraph started the Seattle-based company, GraphLab, Inc. The learnings from GraphLab PowerGraph and GraphChi projects have culminated into GraphLab Create, a enterprise-class data science platform for data scientists and software engineers that can simplify building and deploying advanced machine learning models as a RESTful predictive service. In January 2015, GraphLab, Inc. was renamed to Turi. See [turi.com](https://turi.com) for more information. 
+
+##addtional
+个人测试的机器最低配置：
+处理器：2
+内存：2GB
+系统：Ubuntu-16.04(由于github上项目推荐系统是Ubuntu和Mac，穷人使用的是Ubuntu16.04)
+
+测试经历：
+1、本机上根据github源码安装，有些包的下载链接丢失，安装失败
+2、根据原项目的commit顺序在CMakeLists修改丢失的链接
+3、由于本地网络问题，此后使用多个VPS测试
+4、VPS配置：处理器：1 内存：1GB。安装过程中内存不足，失败
+5、VPS配置：处理器：1 内存：2GB。安装成功，运行时发现处理器不足，失败
+6、VPS配置：处理器：2 内存：4GB。安装成功，运行成功。安装期间发现有些错误，猜测是make -j4的问题，后来修改为make -j2。然后安装成功，运行成功。
+7、本机配置：处理器：4 内存：8GB。安装成功，运行成功。
+
+总结：原项目中的安装命令基本没问题，但是在make -j4的时候，允许同时4个进程进行，而VPS中只有2个处理器，可能这里出现了问题。另外是CMakeLists中有些下载链接已丢失，这里的CMakeLists是2018.03.26可用的下载链接。
+
+
+
 
 ## Status
 GraphLab PowerGraph is no longer in active development by the founding team. GraphLab PowerGraph is now supported by the community at [http://forum.turi.com/](http://forum.turi.com/).  
